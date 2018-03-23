@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "First OTC post!"
+date:   2018-03-23 12:10:29 +0100
+categories: otc
+excerpt_separator: <!--more-->
+---
+
+Hi everybody!
+
+
+<!--more-->
+{% highlight python %}
+
+def print_hi(name)
+    print('name=%s' % name)
+
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
