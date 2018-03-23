@@ -1,5 +1,7 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-
-@import "minima";
+.navbar-portalname a {
+    color: #383838;
+    text-decoration: none;
+}
