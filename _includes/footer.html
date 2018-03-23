@@ -53,30 +53,3 @@
 <!--  disabled since the break everything -->
 <!-- <script src="js/components.min.js"></script> -->
 <!-- <script src="js/docs.js"></script> -->
-
-<script>
-  $(document).ready(function() {
-      $('select').selectbox();
-
-      $('.brand-header').fixation({
-        offsetTop: function() {
-          return -$('.brandbar').height()
-        }
-      });
-
-      $('.search').on('shown.tc.search', function () {
-        var $this = $(this);
-        setTimeout(function() { // user types fake
-          $this.find('input').val('Samsung Galaxy S')
-        }, 1000);
-        setTimeout(function() { // ajax call fake
-          $this.find('.search-results').show();
-        }, 1200);
-      })
-      $('.search').on('hide.tc.search', function () {
-        var $this = $(this);
-        $this.find('.search-results').hide();
-        $this.find('input').val('')
-      })
-  });
-</script>
