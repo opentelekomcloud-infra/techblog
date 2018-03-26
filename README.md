@@ -10,7 +10,5 @@
     date:   2018-03-23 12:10:29 +0100
     categories: otc blueprint
     excerpt_separator: <!--more-->
-    lcb: "{"
-    rcb: "}"
     ---
-* In the content of your post/blueprint ensure, that each curly bracket "{" and "}" are replaced with {{page.lcb}} for "{" and {{page.rcb}} for "}"
+* If in the content "{{" or "}}" or "{%" or "%}" are present (determined as Liquid template) please escape them with {{site.lcb}} for "{" and {{site.rcb}} for "}"
