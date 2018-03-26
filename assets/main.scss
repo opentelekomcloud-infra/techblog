@@ -8,11 +8,14 @@
 
 %vertical-rhythm {
   margin-bottom: 10px;
+}
+
+div.hightlight {
   padding: 10px;
   font-size: 0.8em;
 }
 
-div.highlight {
+.highlight {
   background: #fff;
   @extend %vertical-rhythm;
 
