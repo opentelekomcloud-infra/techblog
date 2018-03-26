@@ -4,6 +4,8 @@ title:  "Openshift Origin on FedoraAtomic"
 date:   2018-03-23 12:10:29 +0100
 categories: otc blueprint
 excerpt_separator: <!--more-->
+lcb: "{"
+rcb: "}"
 ---
 
 # Get OpenShift Origin 3.7 on Fedora 27 Atomic running on Open Telekom cloud
@@ -12,7 +14,7 @@ This document describes procedure how to get OpenShift Origin 3.7 installed on F
 
  * version: 1
 
-&#123;&#123; post.excerpt &#125;&#125;
+{{ post.excerpt }}
 
 Mostly this document will rely on the ReferenceArchitecture provided by the RedHat [Reference Architecture](https://access.redhat.com/documentation/en-us/reference_architectures/2017/html/deploying_and_managing_red_hat_openshift_container_platform_3.6_on_red_hat_openstack_platform_10/). Some modification would be applied in order to get it running on OTC, as well as UnifiedLoadBalancer is used instead of the separate HAProxy instance.
 
@@ -585,9 +587,9 @@ openshift_image_tag=v3.7.0
 debug_level=2
 ansible_become=true
 console_port=8443
-openshift_debug_level="&#123;&#123; debug_level &#125;&#125;"
-openshift_node_debug_level="&#123;&#123; node_debug_level | default(debug_level, true) &#125;&#125;"
-openshift_master_debug_level="&#123;&#123; master_debug_level | default(debug_level, true) &#125;&#125;"
+openshift_debug_level="{{page.lcb}}{{page.lcb}} debug_level {{page.rcb}}{{page.rcb}}"
+openshift_node_debug_level="{{page.lcb}}{{page.lcb}} node_debug_level | default(debug_level, true) {{page.rcb}}{{page.rcb}}"
+openshift_master_debug_level="{{page.lcb}}{{page.lcb}} master_debug_level | default(debug_level, true) {{page.rcb}}{{page.rcb}}"
 
 openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 openshift_master_htpasswd_users={'user1': '$apr1$5a3/BgnO$5xx5sK0e.z1Hy207Yor8d/', 'user2': '$apr1$1oH1Pynz$0syN6XrNcltdKPHgf1JfJ0'}
@@ -599,13 +601,13 @@ openshift_master_cluster_method=native
 openshift_node_local_quota_per_fsgroup=512Mi
 
 openshift_cloudprovider_kind=openstack
-openshift_cloudprovider_openstack_auth_url="&#123;&#123; lookup('env','OS_AUTH_URL') &#125;&#125;"
-openshift_cloudprovider_openstack_username= "&#123;&#123; lookup('env','OS_USERNAME') &#125;&#125;"
-openshift_cloudprovider_openstack_password= "&#123;&#123; lookup('env','OS_PASSWORD') &#125;&#125;"
-openshift_cloudprovider_openstack_tenant_name= "&#123;&#123; lookup('env','OS_TENANT_NAME') &#125;&#125;"
-openshift_cloudprovider_openstack_project_name= "&#123;&#123; lookup('env','OS_PROJECT_NAME') &#125;&#125;"
-openshift_cloudprovider_openstack_domain_name= "&#123;&#123; lookup('env','OS_USER_DOMAIN_NAME') &#125;&#125;"
-openshift_cloudprovider_openstack_region= "&#123;&#123; lookup('env', 'OS_REGION_NAME') &#125;&#125;"
+openshift_cloudprovider_openstack_auth_url="{{page.lcb}}{{page.lcb}} lookup('env','OS_AUTH_URL') {{page.rcb}}{{page.rcb}}"
+openshift_cloudprovider_openstack_username= "{{page.lcb}}{{page.lcb}} lookup('env','OS_USERNAME') {{page.rcb}}{{page.rcb}}"
+openshift_cloudprovider_openstack_password= "{{page.lcb}}{{page.lcb}} lookup('env','OS_PASSWORD') {{page.rcb}}{{page.rcb}}"
+openshift_cloudprovider_openstack_tenant_name= "{{page.lcb}}{{page.lcb}} lookup('env','OS_TENANT_NAME') {{page.rcb}}{{page.rcb}}"
+openshift_cloudprovider_openstack_project_name= "{{page.lcb}}{{page.lcb}} lookup('env','OS_PROJECT_NAME') {{page.rcb}}{{page.rcb}}"
+openshift_cloudprovider_openstack_domain_name= "{{page.lcb}}{{page.lcb}} lookup('env','OS_USER_DOMAIN_NAME') {{page.rcb}}{{page.rcb}}"
+openshift_cloudprovider_openstack_region= "{{page.lcb}}{{page.lcb}} lookup('env', 'OS_REGION_NAME') {{page.rcb}}{{page.rcb}}"
 
 openshift_master_cluster_hostname=openshift.oc.example.com
 openshift_master_cluster_public_hostname=openshift.oc.example.com
