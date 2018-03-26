@@ -3,6 +3,7 @@ layout: post
 title:  "Openshift Origin on FedoraAtomic"
 date:   2018-03-23 12:10:29 +0100
 categories: otc blueprint
+excerpt_separator: <!--more-->
 ---
 
 # Get OpenShift Origin 3.7 on Fedora 27 Atomic running on Open Telekom cloud
@@ -10,6 +11,8 @@ categories: otc blueprint
 This document describes procedure how to get OpenShift Origin 3.7 installed on Fedora 27 Atomic instances on top of the infrastructure provided by Open Telekom Cloud (OTC).
 
  * version: 1
+
+{{ post.excerpt }}
 
 Mostly this document will rely on the ReferenceArchitecture provided by the RedHat [Reference Architecture](https://access.redhat.com/documentation/en-us/reference_architectures/2017/html/deploying_and_managing_red_hat_openshift_container_platform_3.6_on_red_hat_openstack_platform_10/). Some modification would be applied in order to get it running on OTC, as well as UnifiedLoadBalancer is used instead of the separate HAProxy instance.
 

@@ -37,7 +37,7 @@ collections:
     output: true
 
 # if we want to show excerpts we need to ensure first paragraph is not too long
-show_excerpts: false
+show_excerpts: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
