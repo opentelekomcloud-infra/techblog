@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Welcome alpha"
+date:   2018-04-03 11:00:00 +0100
+categories: otc
+author: Tino Schreiber
+excerpt_separator: <!--excerpt-->
+---
+
+Today we are happy to announce our new communication platform: Techblog Open Telekom Cloud.
+We will answer often asked questions by our customers to provide another platform for gathering useful information around Cloud based technologies. We will also provide blueprints on how to setup infrastructure on Open Telekom Cloud to make it easier to get started.
+
+<!--excerpt-->
