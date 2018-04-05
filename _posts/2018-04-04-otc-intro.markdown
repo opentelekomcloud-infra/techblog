@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome to the Techblog of Open Telekom Cloud"
 date:   2018-04-04 11:00:00 +0100
 categories: otc
-author: Tino Schreiber
+author: T. Schreiber
 excerpt_separator: <!--excerpt-->
 ---
 
