@@ -1,6 +1,16 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .navbar-portalname a {
     color: #383838;
     text-decoration: none;
@@ -18,7 +28,7 @@ div.highlight {
 main {
   padding-top: 80px;
   padding-bottom: 80px;
-  min-height: 700px;
+  //min-height: 700px;
 }
 
 .post {
