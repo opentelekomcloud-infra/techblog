@@ -2,7 +2,9 @@
 layout: post
 title:  "Get OpenShift Origin 3.7 on Fedora 27 Atomic running on Open Telekom Cloud"
 date:   2018-04-17 08:00:00 +0100
-categories: otc, blueprints
+categories:
+  - otc
+  - blueprints
 author: A. Goncharov
 excerpt_separator: <!--excerpt-->
 ---
