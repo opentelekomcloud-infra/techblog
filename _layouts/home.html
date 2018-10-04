@@ -9,7 +9,7 @@ layout: default
 
 {%- if site.posts.size > 0 -%}
   <div class="row content-1">
-    <div class="col-l-8 col-s-12">
+    <div class="col-xl-8 offset-xl-2 col-l-12">
       {% for post in site.posts %}
         <div class="post">
           <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
